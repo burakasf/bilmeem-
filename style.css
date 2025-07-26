@@ -48,10 +48,40 @@ body {
   align-items: center;
   border-radius: 4px;
   display: flex;
-  height: 250px;
+  height: 290px;
   width: 300px;
-  background-color: rgb(255, 255, 255);
+  background: linear-gradient(
+    270deg,
+    #ff0000,
+    #ff8000,
+    #ffff00,
+    #80ff00,
+    #00ff00,
+    #00ff80,
+    #00ffff,
+    #0080ff,
+    #0000ff,
+    #8000ff,
+    #ff00ff,
+    #ff0080,
+    #ff0000
+  );
+  background-size: 1000% 1000%;
+  animation: rgbBlockAnim 15s linear infinite;
 }
+
+@keyframes rgbBlockAnim {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 .token {
   color: #ffffff;
   font-size: 15px;
